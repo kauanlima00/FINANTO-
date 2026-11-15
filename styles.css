@@ -1,0 +1,86 @@
+/* FINANTO - estilos. Cores definidas como variáveis para fácil edição. */
+:root{--g1:#142B25;--g2:#24483B;--beige:#F4EBDD;--white:#fff;--soft:#F3F4F2;--gold:#C5A66A;--r:14px}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--g1);background:var(--white);line-height:1.65}
+h1,h2,h3,.logo,.cover strong,.m-book strong{font-family:Georgia,"Times New Roman",serif;line-height:1.2}
+a{color:inherit}
+.container{width:min(1120px,92%);margin:auto}
+.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:#fff;padding:8px;z-index:99}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+/* Cabeçalho */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(244,235,221,.95);backdrop-filter:blur(8px);border-bottom:1px solid rgba(20,43,37,.1)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:68px}
+.logo{font-size:1.6rem;font-weight:700;letter-spacing:.14em;text-decoration:none}
+.logo span{color:var(--gold)}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-size:.95rem}
+.menu-btn{display:none;background:none;border:1px solid var(--g1);border-radius:8px;font-size:1.3rem;padding:4px 12px;cursor:pointer;color:var(--g1)}
+
+/* Botões */
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;text-decoration:none;border:0;cursor:pointer;font-size:1rem;transition:transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-gold{background:var(--gold);color:var(--g1)!important}
+.btn-dark{background:var(--g1);color:#fff}
+
+/* Hero */
+.hero{background:linear-gradient(135deg,var(--g1),var(--g2));color:#fff;padding:90px 0}
+.hero-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.eyebrow{color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:.8rem;margin-bottom:16px}
+.hero h1{font-size:clamp(2rem,4.6vw,3.3rem);margin-bottom:20px}
+.lead{color:#dfe7e2;font-size:1.1rem;margin-bottom:30px}
+
+/* Mockups */
+.mockups{position:relative;height:340px}
+.mockups>div{position:absolute;border-radius:var(--r);box-shadow:0 20px 40px rgba(0,0,0,.35)}
+.m-book{left:30%;top:0;width:190px;height:260px;background:var(--beige);color:var(--g1);padding:22px;display:flex;flex-direction:column;justify-content:space-between;transform:rotate(-4deg);border-left:10px solid var(--gold);z-index:2}
+.m-book small{letter-spacing:.15em;font-size:.65rem}.m-book strong{font-size:1.5rem}.m-book em{font-size:.7rem;letter-spacing:.2em}
+.m-sheet{left:0;top:90px;width:190px;background:#fff;color:var(--g1);padding:14px;transform:rotate(-9deg)}
+.m-sheet .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:5px;margin-top:8px}
+.m-sheet u{height:22px;background:var(--soft);border-radius:4px}.m-sheet u:nth-child(4n){background:var(--gold)}
+.m-planner{right:0;top:60px;width:180px;background:var(--g2);border:1px solid var(--gold);color:#fff;padding:16px;transform:rotate(7deg)}
+.m-planner i{display:block;height:10px;margin-top:14px;background:rgba(255,255,255,.2);border-radius:5px}
+
+/* Secções */
+.section{padding:84px 0}
+.section h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:34px}
+.alt{background:var(--soft)}
+.dark{background:var(--g1);color:#fff}.dark p{color:#dfe7e2;font-size:1.1rem}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.card{background:#fff;padding:30px;border-radius:var(--r);border:1px solid rgba(20,43,37,.08)}
+.card .num{color:var(--gold);font-family:Georgia,serif;font-size:1.6rem}
+.card h3{margin:8px 0}
+
+/* Produto */
+.product{display:grid;grid-template-columns:260px 1fr;gap:40px;align-items:center;background:var(--beige);padding:34px;border-radius:20px}
+.cover{background:var(--g1);color:#fff;border-radius:var(--r);aspect-ratio:3/4;padding:24px;display:flex;flex-direction:column;justify-content:space-between;border-left:10px solid var(--gold)}
+.cover small{color:var(--gold);letter-spacing:.12em;font-size:.65rem}.cover strong{font-size:1.7rem}
+.badge{display:inline-block;background:var(--g1);color:var(--gold);padding:4px 14px;border-radius:999px;font-size:.8rem;font-weight:700;margin-bottom:10px}
+.price{font-weight:700;font-size:1.2rem;margin:14px 0 4px}
+.note{font-size:.9rem;opacity:.8}
+
+/* Contacto */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:50px}
+.contact p{margin-bottom:16px}
+form label{display:block;font-weight:600;margin:14px 0 6px}
+input,textarea{width:100%;padding:12px;border:1px solid #c9cfcb;border-radius:10px;font:inherit;background:#fff}
+form .btn{margin-top:18px}
+#estado{margin-top:12px;font-weight:600}
+
+/* Legal e rodapé */
+.legal{padding:60px 0}.legal section{margin:40px 0}.legal h1,.legal h2{margin-bottom:14px}.legal p{margin-bottom:12px}
+.footer{background:var(--g1);color:#dfe7e2;padding:44px 0}
+.foot{display:grid;gap:18px}.foot nav{display:flex;flex-wrap:wrap;gap:8px 22px}.foot a{text-decoration:none}.foot .logo{color:#fff}
+
+/* Responsivo */
+@media(max-width:860px){
+  .hero-grid,.contact,.product,.cards{grid-template-columns:1fr}
+  .product .cover{max-width:220px}
+  .menu-btn{display:block}
+  .nav:not(.open-static){display:none;position:absolute;top:68px;left:0;right:0;background:var(--beige);flex-direction:column;align-items:flex-start;padding:20px 4%;gap:16px}
+  .nav.open{display:flex!important}
+  .mockups{height:300px;transform:scale(.9)}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
